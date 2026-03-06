@@ -70,3 +70,33 @@ describe("Rates API", () => {
     );
   });
 });
+
+describe("Rate Limiting", () => {
+
+  it("should allow requests within limit", async () => {
+    for (let i = 0; i < 15; i++) {
+      const res = await request(app).post("/api/rates").send(MOCK_200_OK_REQUEST);
+
+      expect(res.status).toBe(200);
+    }
+  });
+
+  it("should block requests after limit", async () => {
+
+    let lastResponse;
+
+    for (let i = 0; i < 101; i++) {
+      lastResponse = await request(app).post("/api/rates").send(MOCK_200_OK_REQUEST);
+    }
+    console.log(lastResponse)
+    expect(lastResponse?.status).toBe(429);
+    expect(lastResponse?.body).toEqual({
+      error: "Too many requests",
+      details: {
+        message: "Rate limit exceeded. Try again later."
+      }
+    });
+
+  });
+
+});
