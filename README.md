@@ -20,8 +20,31 @@ Example response:
 
 # Architecture
 
-Client ↓ API Layer (Express) ↓ Service Layer ↓ Carrier Layer (UPS) ↓
-External UPS API
+Client Request
+     │
+     ▼
+Express Router
+     │
+     ▼
+Rate Limiter
+     │
+     ▼
+Rates Controller
+     │
+     ▼
+UPS Carrier Service
+     │
+     ▼
+UPS Auth Service
+     │
+     ▼
+UPS API
+     │
+     ▼
+Response Normalizer
+     │
+     ▼
+Unified Response
 
 ------------------------------------------------------------------------
 
@@ -144,9 +167,13 @@ Example error:
 
 Testing is implemented with **Jest**.
 
-External UPS API calls are mocked using:
+Test coverage includes:
 
-jest.mock("axios")
+- API endpoint tests
+- Request validation tests
+- Rate normalization tests
+- Carrier service tests
+- Rate limiting behavior
 
 ------------------------------------------------------------------------
 
@@ -174,6 +201,10 @@ npm test
 
 # Future Improvements
 
-• Multi‑carrier support (FedEx, DHL)\
-• Retry logic\
-• Observability and Metrics
+- Multi‑carrier support (FedEx, DHL)\
+- Retry logic\
+- Observability and Metrics
+- Request caching
+- Distributed Rate Limiting
+- Observability (metrics, logging, tracing)
+- Parallel rate aggregation across carriers
