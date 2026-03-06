@@ -1,7 +1,7 @@
 
 import express from "express";
-import rateRoutes from "./routes/rate.routes.js";
-import { errorHandler } from "../core/errors/errors.util.js";
+import rateRoutes from "./routes/rate.routes";
+import { errorHandler } from "../core/errors/errors.util";
 
 const app = express();
 app.use(express.json());
@@ -12,3 +12,6 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+
+export default app;

@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from "express";
-import { AppError, ErrorDetails } from "./errors.js";
+import { AppError, ErrorDetails } from "./errors";
 
 export interface ErrorResponse {
   error: string;

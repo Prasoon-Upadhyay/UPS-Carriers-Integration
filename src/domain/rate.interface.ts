@@ -1,5 +1,5 @@
 import z from "zod";
-import { rateRequestSchema } from "../core/validation/schema.js";
+import { rateRequestSchema } from "../core/validation/schema";
 
 export interface Address {
   postalCode: string;           

@@ -1,11 +1,11 @@
 // import axios from 'axios';
-// import { Address, PackageDetails } from '../../domain/rate.interface.js';
-import { UPSAuthService } from "./upsAuth.service.js";
-import { config } from "../../config/config.js";
-import { CarrierProvider } from "../../domain/carrier.interface.js";
-import { RateRequest, RateResponse } from "../../domain/rate.interface.js";
-import { MOCK_RATES } from "../../test/mock.js";
-import { CURRENCY, PROVIDERS } from "./ups.constant.js";
+// import { Address, PackageDetails } from '../../domain/rate.interface';
+import { UPSAuthService } from "./upsAuth.service";
+import { config } from "../../config/config";
+import { CarrierProvider } from "../../domain/carrier.interface";
+import { RateRequest, RateResponse } from "../../domain/rate.interface";
+import { MOCK_RATES } from "../../test/mock";
+import { CURRENCY, PROVIDERS } from "./ups.constant";
 
 export class UPSProvider implements CarrierProvider {
   private authService = new UPSAuthService();

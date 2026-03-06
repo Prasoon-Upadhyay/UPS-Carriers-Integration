@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { UPSProvider } from "../../providers/ups/ups.provider.js";
-import { rateRequestSchema } from "../../core/validation/schema.js";
-import { AppError } from "../../core/errors/errors.js";
+import { UPSProvider } from "../../providers/ups/ups.provider";
+import { rateRequestSchema } from "../../core/validation/schema";
+import { AppError } from "../../core/errors/errors";
 
 const router = Router();
 const ups = new UPSProvider();

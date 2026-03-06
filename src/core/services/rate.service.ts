@@ -1,5 +1,5 @@
-import { RateRequest } from "../../domain/rate.interface.js";
-import { CarrierProvider } from "../../domain/carrier.interface.js"; 
+import { RateRequest } from "../../domain/rate.interface";
+import { CarrierProvider } from "../../domain/carrier.interface"; 
 
 export class RateService {
 

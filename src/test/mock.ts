@@ -1,280 +1,326 @@
 export const MOCK_RATES = {
-  "RateResponse": {
-    "Response": {
-      "ResponseStatus": {
-        "Code": "s",
-        "Description": "string"
+  RateResponse: {
+    Response: {
+      ResponseStatus: {
+        Code: "1",
+        Description: "Success"
       },
-      "Alert": [
+      Alert: [
         {
-          "Code": "string",
-          "Description": "string"
+          Code: "110971",
+          Description: "Rate returned successfully"
         }
       ],
-      "AlertDetail": [
+      AlertDetail: [
         {
-          "Code": "string",
-          "Description": "string",
-          "ElementLevelInformation": {
-            "Level": "s",
-            "ElementIdentifier": [
+          Code: "110971",
+          Description: "Rate returned successfully",
+          ElementLevelInformation: {
+            Level: "Shipment",
+            ElementIdentifier: [
               {
-                "Code": null,
-                "Value": null
+                Code: "SHIPMENT",
+                Value: "1"
               }
             ]
           }
         }
       ],
-      "TransactionReference": {
-        "CustomerContext": "string"
+      TransactionReference: {
+        CustomerContext: "CyberShip Test Request"
       }
     },
-    "RatedShipment": [
+
+    RatedShipment: [
       {
-        "Disclaimer": [
+        Disclaimer: [
           {
-            "Code": "st",
-            "Description": "string"
+            Code: "DISC01",
+            Description: "Rates are estimates only"
           }
         ],
-        "Service": {
-          "Code": "str",
-          "Description": "string"
+
+        Service: {
+          Code: "03",
+          Description: "UPS Ground"
         },
-        "RateChart": "s",
-        "Zone": "stri",
-        "RatedShipmentAlert": [
+
+        RateChart: "RateChart1",
+        Zone: "2",
+
+        RatedShipmentAlert: [
           {
-            "Code": "string",
-            "Description": "string"
+            Code: "RATE_INFO",
+            Description: "Standard rate applied"
           }
         ],
-        "BillableWeightCalculationMethod": "st",
-        "RatingMethod": "st",
-        "BillingWeight": {
-          "UnitOfMeasurement": {
-            "Code": "str",
-            "Description": "string"
+
+        BillableWeightCalculationMethod: "Dimensional",
+        RatingMethod: "Account",
+
+        BillingWeight: {
+          UnitOfMeasurement: {
+            Code: "LBS",
+            Description: "Pounds"
           },
-          "Weight": "strin"
+          Weight: "5"
         },
-        "TransportationCharges": {
-          "CurrencyCode": "str",
-          "MonetaryValue": "string"
+
+        TransportationCharges: {
+          CurrencyCode: "USD",
+          MonetaryValue: "10.50"
         },
-        "BaseServiceCharge": {
-          "CurrencyCode": "str",
-          "MonetaryValue": "string"
+
+        BaseServiceCharge: {
+          CurrencyCode: "USD",
+          MonetaryValue: "10.50"
         },
-        "ItemizedCharges": [
+
+        ItemizedCharges: [
           {
-            "Code": "str",
-            "Description": "string",
-            "CurrencyCode": "str",
-            "MonetaryValue": "string",
-            "SubType": "string"
+            Code: "FUEL",
+            Description: "Fuel surcharge",
+            CurrencyCode: "USD",
+            MonetaryValue: "1.25",
+            SubType: "Fuel"
           }
         ],
-        "FRSShipmentData": {
-          "TransportationCharges": {
-            "GrossCharge": {
-              "CurrencyCode": "str",
-              "MonetaryValue": "string"
+
+        FRSShipmentData: {
+          TransportationCharges: {
+            GrossCharge: {
+              CurrencyCode: "USD",
+              MonetaryValue: "11.75"
             },
-            "DiscountAmount": {
-              "CurrencyCode": "str",
-              "MonetaryValue": "string"
+            DiscountAmount: {
+              CurrencyCode: "USD",
+              MonetaryValue: "0.50"
             },
-            "DiscountPercentage": "st",
-            "NetCharge": {
-              "CurrencyCode": "str",
-              "MonetaryValue": "string"
+            DiscountPercentage: "5",
+            NetCharge: {
+              CurrencyCode: "USD",
+              MonetaryValue: "11.25"
             }
           },
-          "FreightDensityRate": {
-            "Density": "strin",
-            "TotalCubicFeet": "string"
+
+          FreightDensityRate: {
+            Density: "12",
+            TotalCubicFeet: "1.5"
           },
-          "HandlingUnits": [
+
+          HandlingUnits: [
             {
-              "Quantity": "string",
-              "Type": {
-                "Code": null,
-                "Description": null
+              Quantity: "1",
+              Type: {
+                Code: "BOX",
+                Description: "Box"
               },
-              "Dimensions": {
-                "UnitOfMeasurement": null,
-                "Length": null,
-                "Width": null,
-                "Height": null
+              Dimensions: {
+                UnitOfMeasurement: "IN",
+                Length: "10",
+                Width: "8",
+                Height: "6"
               },
-              "AdjustedHeight": {
-                "Value": null,
-                "UnitOfMeasurement": null
+              AdjustedHeight: {
+                Value: "6",
+                UnitOfMeasurement: "IN"
               }
             }
           ]
         },
-        "ServiceOptionsCharges": {
-          "CurrencyCode": "str",
-          "MonetaryValue": "string"
+
+        ServiceOptionsCharges: {
+          CurrencyCode: "USD",
+          MonetaryValue: "0.00"
         },
-        "TaxCharges": [
+
+        TaxCharges: [
           {
-            "Type": "string",
-            "MonetaryValue": "string"
+            Type: "SalesTax",
+            MonetaryValue: "0.75"
           }
         ],
-        "TotalCharges": {
-          "CurrencyCode": "str",
-          "MonetaryValue": "string"
+
+        TotalCharges: {
+          CurrencyCode: "USD",
+          MonetaryValue: "12.50"
         },
-        "TotalChargesWithTaxes": {
-          "CurrencyCode": "str",
-          "MonetaryValue": "string"
+
+        TotalChargesWithTaxes: {
+          CurrencyCode: "USD",
+          MonetaryValue: "13.25"
         },
-        "NegotiatedRateCharges": {
-          "BaseServiceCharge": [
+
+        NegotiatedRateCharges: {
+          BaseServiceCharge: [
             {
-              "CurrencyCode": "str",
-              "MonetaryValue": "string"
+              CurrencyCode: "USD",
+              MonetaryValue: "9.75"
             }
           ],
-          "RateModifier": [
+
+          RateModifier: [
             {
-              "ModifierType": "str",
-              "ModifierDesc": "string",
-              "Amount": "string"
+              ModifierType: "Discount",
+              ModifierDesc: "Account Discount",
+              Amount: "0.75"
             }
           ],
-          "ItemizedCharges": [
+
+          ItemizedCharges: [
             {
-              "Code": "str",
-              "Description": "string",
-              "CurrencyCode": "str",
-              "MonetaryValue": "string",
-              "SubType": "string"
+              Code: "FUEL",
+              Description: "Fuel surcharge",
+              CurrencyCode: "USD",
+              MonetaryValue: "1.00",
+              SubType: "Fuel"
             }
           ],
-          "TaxCharges": [
+
+          TaxCharges: [
             {
-              "Type": "string",
-              "MonetaryValue": "string"
+              Type: "SalesTax",
+              MonetaryValue: "0.70"
             }
           ],
-          "TotalCharge": {
-            "CurrencyCode": "string",
-            "MonetaryValue": "string"
+
+          TotalCharge: {
+            CurrencyCode: "USD",
+            MonetaryValue: "11.45"
           },
-          "TotalChargesWithTaxes": {
-            "CurrencyCode": "string",
-            "MonetaryValue": "string"
+
+          TotalChargesWithTaxes: {
+            CurrencyCode: "USD",
+            MonetaryValue: "12.15"
           }
         },
-        "RatedPackage": [
+
+        RatedPackage: [
           {
-            "BaseServiceCharge": {
-              "CurrencyCode": "str",
-              "MonetaryValue": "string"
+            BaseServiceCharge: {
+              CurrencyCode: "USD",
+              MonetaryValue: "10.50"
             },
-            "TransportationCharges": {
-              "CurrencyCode": "string",
-              "MonetaryValue": "string"
+
+            TransportationCharges: {
+              CurrencyCode: "USD",
+              MonetaryValue: "10.50"
             },
-            "ServiceOptionsCharges": {
-              "CurrencyCode": "string",
-              "MonetaryValue": "string"
+
+            ServiceOptionsCharges: {
+              CurrencyCode: "USD",
+              MonetaryValue: "0.00"
             },
-            "TotalCharges": {
-              "CurrencyCode": "string",
-              "MonetaryValue": "string"
+
+            TotalCharges: {
+              CurrencyCode: "USD",
+              MonetaryValue: "12.50"
             },
-            "Weight": "string",
-            "BillingWeight": {
-              "UnitOfMeasurement": {
-                "Code": null,
-                "Description": null
+
+            Weight: "5",
+
+            BillingWeight: {
+              UnitOfMeasurement: {
+                Code: "LBS",
+                Description: "Pounds"
               },
-              "Weight": "string"
+              Weight: "5"
             },
-            "Accessorial": [
+
+            Accessorial: [
               {
-                "Code": null,
-                "Description": null
+                Code: "FUEL",
+                Description: "Fuel surcharge"
               }
             ],
-            "ItemizedCharges": [
+
+            ItemizedCharges: [
               {
-                "Code": null,
-                "Description": null,
-                "CurrencyCode": null,
-                "MonetaryValue": null,
-                "SubType": null
+                Code: "FUEL",
+                Description: "Fuel surcharge",
+                CurrencyCode: "USD",
+                MonetaryValue: "1.25",
+                SubType: "Fuel"
               }
             ],
-            "NegotiatedCharges": {
-              "RateModifier": [
-                null
+
+            NegotiatedCharges: {
+              RateModifier: [
+                {
+                  ModifierType: "Discount",
+                  ModifierDesc: "Account Discount",
+                  Amount: "0.75"
+                }
               ],
-              "ItemizedCharges": [
-                null
-              ]
+              ItemizedCharges: []
             },
-            "SimpleRate": {
-              "Code": "st"
+
+            SimpleRate: {
+              Code: "SR"
             },
-            "RateModifier": [
+
+            RateModifier: [
               {
-                "ModifierType": null,
-                "ModifierDesc": null,
-                "Amount": null
+                ModifierType: "Discount",
+                ModifierDesc: "Account Discount",
+                Amount: "0.75"
               }
             ]
           }
         ],
-        "TimeInTransit": {
-          "PickupDate": "stringst",
-          "DocumentsOnlyIndicator": "string",
-          "PackageBillType": "st",
-          "ServiceSummary": {
-            "Service": {
-              "Description": "string"
+
+        TimeInTransit: {
+          PickupDate: "20260306",
+          DocumentsOnlyIndicator: "N",
+          PackageBillType: "03",
+
+          ServiceSummary: {
+            Service: {
+              Description: "UPS Ground"
             },
-            "GuaranteedIndicator": "string",
-            "Disclaimer": "string",
-            "EstimatedArrival": {
-              "Arrival": {
-                "Date": null,
-                "Time": null
+
+            GuaranteedIndicator: "N",
+            Disclaimer: "Delivery time not guaranteed",
+
+            EstimatedArrival: {
+              Arrival: {
+                Date: "20260309",
+                Time: "180000"
               },
-              "BusinessDaysInTransit": "strin",
-              "Pickup": {
-                "Date": null,
-                "Time": null
+
+              BusinessDaysInTransit: "3",
+
+              Pickup: {
+                Date: "20260306",
+                Time: "150000"
               },
-              "DayOfWeek": "string",
-              "CustomerCenterCutoff": "string",
-              "DelayCount": "str",
-              "HolidayCount": "st",
-              "RestDays": "st",
-              "TotalTransitDays": "strin"
+
+              DayOfWeek: "Monday",
+              CustomerCenterCutoff: "170000",
+              DelayCount: "0",
+              HolidayCount: "0",
+              RestDays: "0",
+              TotalTransitDays: "3"
             },
-            "SaturdayDelivery": "string",
-            "SaturdayDeliveryDisclaimer": "string",
-            "SundayDelivery": "string",
-            "SundayDeliveryDisclaimer": "string"
+
+            SaturdayDelivery: "N",
+            SaturdayDeliveryDisclaimer: "",
+            SundayDelivery: "N",
+            SundayDeliveryDisclaimer: ""
           },
-          "AutoDutyCode": "st",
-          "Disclaimer": "string"
+
+          AutoDutyCode: "00",
+          Disclaimer: ""
         },
-        "GuaranteedDelivery": {
-          "BusinessDaysInTransit": "string",
-          "DeliveryByTime": "string",
-          "ScheduledDeliveryDate": "string"
+
+        GuaranteedDelivery: {
+          BusinessDaysInTransit: "3",
+          DeliveryByTime: "18:00",
+          ScheduledDeliveryDate: "2026-03-09"
         },
-        "RoarRatedIndicator": "string"
+
+        RoarRatedIndicator: "N"
       }
     ]
   }
-}
+};

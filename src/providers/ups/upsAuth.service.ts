@@ -1,7 +1,6 @@
-// src/providers/ups/upsAuth.service.ts
 import axios from 'axios';
-import { config } from '../../config/config.js';
-import { getCacheInstance } from '../../core/cache/index.js';
+import { config } from '../../config/config';
+import { getCacheInstance } from '../../core/cache/index';
 
 interface UPSAuth {
   access_token: string;

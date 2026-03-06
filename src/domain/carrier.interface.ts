@@ -1,4 +1,4 @@
-import { RateRequest, RateResponse } from "./rate.interface.js" 
+import { RateRequest, RateResponse } from "./rate.interface" 
 
 export interface CarrierProvider {
   getRates(request: RateRequest): Promise<RateResponse[]>

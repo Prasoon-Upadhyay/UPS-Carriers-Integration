@@ -9,7 +9,6 @@ export class RedisCache<T> implements ICache<T> {
   private client: Redis;
 
   constructor(redisUrl: string) {
-    console.log(redisUrl)
     this.client = new Redis(redisUrl);
   }
 

@@ -1,4 +1,4 @@
-import { ICache, RedisCache } from './redisCache.js';
+import { ICache, RedisCache } from './redisCache';
 
 let cacheInstance: ICache<any> | null = null;
 
