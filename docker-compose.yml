@@ -1,0 +1,25 @@
+version: '3.9'
+
+services:
+  redis:
+    image: redis:7
+    container_name: redis
+    ports:
+      - "6379:6379"
+
+  app:
+    build: .
+    container_name: ups-app
+    ports:
+      - "${PORT}:${PORT}"
+    environment:
+      - PORT=${PORT}
+      - REDIS_URL=${REDIS_URL}
+      - UPS_OAUTH_URL=${UPS_OAUTH_URL}
+      - UPS_CLIENT_ID=${UPS_CLIENT_ID}
+      - UPS_CLIENT_SECRET=${UPS_CLIENT_SECRET}
+      - UPS_MERCHANT_ID=${UPS_MERCHANT_ID}
+    env_file:
+      - .env
+    depends_on:
+      - redis
